@@ -238,6 +238,104 @@ section .header-section {
     color: #1e40af;
 }
 
+.icon {
+    width: 250px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.content .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #383e45;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.content .item i {
+    font-size: 34px;
+    color: #fff;
+}
+
+.email {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 260px;
+}
+
+.btn-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #383e45;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 34px;
+    color: #fff;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.skills .left {
+    width: 680px;
+}
+
+.skills .left .info h3 {
+    color: #fff;
+    font-size: 30px;
+    /* margin-bottom: 20px; */
+}
+
+.skills .left .info p {
+    color: #ccc;
+    font-size:  15px;
+}
+
+.skills .right {
+    width:  420px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills .right .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #383e45;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.skills .right .item i {
+    font-size: 34px;
+    color: #fff;
+}
+
+
 @media (width < 900px){
     .nav-links{
         display: none;
@@ -254,6 +352,23 @@ section .header-section {
     footer{
         grid-template-columns: 1fr 200px;
     }
+
+    .skills{
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .skills .left{
+        width: 500px;
+    }
+
+    .skills .left .info h3{
+        font-size: 22px;
+    }
+
+    .skills .left .info p{
+        font-size: 12px;
+    }
 }
 
 @media (width < 600px){
@@ -267,5 +382,18 @@ section .header-section {
 
     footer{
         grid-template-columns: 1fr 150px;
+    }
+
+    .skills{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skills .right{
+        justify-content: space-between;
+    }
+
+    .skills .left .info h3{
+        font-size: 20px;
     }
 }
