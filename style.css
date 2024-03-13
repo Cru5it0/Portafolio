@@ -10,7 +10,7 @@
 
 img {
     width: 100%;
-    display: flex;
+    display: flex;    
 }
 
 a {
@@ -49,13 +49,13 @@ nav{
     gap: 3rem;
 }
 
-.link a{
+.link a {
     position: relative;
     padding-bottom: 0.75rem;
     color: #fff;
 }
 
-.link a::after{
+.link a::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -66,11 +66,11 @@ nav{
     transition: all 0.3s ease;
 }
 
-.link a:hover::after{
+.link a:hover::after {
     width: 70%;
 }
 
-.btn{
+.btn {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
@@ -80,23 +80,23 @@ nav{
     transition: all 0.3s ease;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #1e40af;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: auto;
     padding: 5rem 2rem;
 }
 
-.blur{
+.blur {
     position: absolute;
     box-shadow: 0 0 1000px 50px #1d4ed8;
     z-index: -100;
 }
 
-.copytigth{
+.copytigth {
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
@@ -118,7 +118,6 @@ header .content h4 {
     margin-bottom: 1rem;
     color: #ccc;
     font-size: 1rem;
-    font-weight: 600;
 }
 
 header .content h1 {
@@ -133,8 +132,9 @@ header .content h1 span {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #fff;
 }
+
 .language {
-    width: 150px;
+    width: 200;
     height: 100px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
@@ -146,18 +146,16 @@ header .content h1 span {
     align-items: center;
   }
   
-  .language img {
+.language img {
     width: 50px;
     height: 50px;
     margin-bottom: 5px;
-  }
-  
-  .language h3 {
+}
+
+.language h3 {
     font-size: 16px;
     margin: 0;
-  }
-  
-
+}
 
 header .content p {
     margin-bottom: 2rem;
@@ -173,6 +171,13 @@ header .image {
     width: 400px;
     height: 350px;
     object-fit: cover;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.img:hover {
+    background-color: #323232;
+    border-color: #fff;
 }
 
 section .header-section {
@@ -290,13 +295,14 @@ input[type="text"] {
 }
 
 .skills {
+    max-width: 1200px;
     display: flex;
     justify-content: space-around;
     padding: 0 50px;
 }
 
 .skills .left {
-    width: 680px;
+    max-width: auto;
 }
 
 .skills .left .info h3 {
@@ -311,7 +317,7 @@ input[type="text"] {
 }
 
 .skills .right {
-    width:  420px;
+    width:  auto;
     height: 120px;
     display: flex;
     align-items: center;
@@ -335,6 +341,60 @@ input[type="text"] {
     color: #fff;
 }
 
+
+/* Card contact */
+.contact {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+    width: auto;
+}
+
+.contact .info h3 {
+    color: #fff;
+    font-size: 30px;
+    /* margin-bottom: 20px; */
+}
+
+.container .card img {
+    width: 250px;
+    height: auto;
+}
+
+.container .card {
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.container .card:hover {
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.container .card h2 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.container .card p {
+    color: #ccc;
+
+    margin-bottom: 1rem;
+}
+
+.container .card a {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.contact .card a:hover {
+    color: #1e40af;
+}
 
 @media (width < 900px){
     .nav-links{
