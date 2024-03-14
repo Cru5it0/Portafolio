@@ -22,6 +22,7 @@ body {
     background-color: #18181B;
 }
 
+/* My prtafolio */
 .header {
     padding: 30px;
     text-align: center;
@@ -30,12 +31,18 @@ body {
 
 nav{
     max-width: 1200px;
+    max-height: 120px;
     margin: auto;
     padding: 2rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    z-index: 1000;
+    position: sticky; /* Cambiar a 'sticky' */
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(8px);
 }
 
 .nav-logo {
@@ -188,6 +195,7 @@ section .header-section {
     font-weight: 600;
 }
 
+/* Footer */
 .footer {
     padding: 20px;
     text-align: center;
@@ -343,6 +351,10 @@ input[type="text"] {
 
 
 /* Card contact */
+.form {
+    width: auto;
+}
+
 .contact {
     display: flex;
     justify-content: space-around;
@@ -352,7 +364,7 @@ input[type="text"] {
 
 .contact .info h3 {
     color: #fff;
-    font-size: 30px;
+    font-size: 20px;
     /* margin-bottom: 20px; */
 }
 
@@ -370,7 +382,7 @@ input[type="text"] {
 }
 
 .container .card:hover {
-    background-color: #323232;
+    background-color: #27272a;
     border-color: #fff;
 }
 
@@ -394,6 +406,136 @@ input[type="text"] {
 
 .contact .card a:hover {
     color: #1e40af;
+}
+
+.icon {
+    width: 250px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contact .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #383e45;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.contact .item i {
+    font-size: 34px;
+    color: #fff;
+}
+
+/* Form */
+.input-container {
+    height: 50px;
+    width: 500px;
+    position: relative;    
+}
+
+.message-container {
+    position: relative;
+}
+
+.ic1 {
+    margin-top: 40px;
+}
+
+.ic2 {
+    margin-top: 10px;
+}
+
+.ic3 {
+    margin-top: 30px;
+}
+
+.input {
+    background-color: #303245;
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+#firstname {
+    width: 500px;
+}
+
+#email {
+    width: 500px;
+}
+
+.cut {
+    background-color: #27272a;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+}
+
+.cut-short {
+    width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #fff;
+}
+
+.submit {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+}
+  
+.submit:active {
+    background-color: #06b;
 }
 
 @media (width < 900px){
@@ -429,6 +571,15 @@ input[type="text"] {
     .skills .left .info p{
         font-size: 12px;
     }
+
+    #firstname {
+        width: relative;
+    }
+    
+    #email {
+        width: relative;
+    }
+
 }
 
 @media (width < 600px){
@@ -455,5 +606,38 @@ input[type="text"] {
 
     .skills .left .info h3{
         font-size: 20px;
+    }
+    
+}
+
+/* Para dispositivos con un ancho máximo de 768px */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column; /* Cambia el diseño a una columna */
+        padding: 0 20px; /* Reduce el relleno horizontal */
+    }
+
+    .input-container {
+        width: 100%;
+        max-width: 100%; /* Cambia el ancho máximo a 100% para adaptarse al ancho del contenedor */
+    }
+
+    .input {
+        font-size: 16px; /* Reduce el tamaño de la fuente */
+    }
+
+    #firstname {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #email {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .submit {
+        width: 100%;
+        max-width: 100%;
     }
 }
