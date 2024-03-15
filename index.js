@@ -1,33 +1,45 @@
 'use strict';
 
-function scrollToElement(elementSelector, instance = 0) {
-    // Select all elements that match the given selector
-    const elements = document.querySelectorAll(elementSelector);
-    // Check if there elements matvhing the selector and if the requested instance exists
-    if (elements.length > instance) {
-        elements[instance].scrollIntoView({ behavior: 'smooth' });
+document.getElementById('copy-email').addEventListener('click', function() {
+    var emailText = document.querySelector('.contact-info ul li:last-child').textContent.trim();
+    navigator.clipboard.writeText(emailText).then(function() {
+        Swal.fire({
+          title: "Good job!",
+          text: "The email has been copied! " + emailText,
+          icon: "success"
+        });
+    }).catch(function(err) {
+        console.error('Error copying email: ', err);
+    });
+});
+
+
+function scrollToElement(elementSelector) {
+    const element = document.querySelector(elementSelector);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
     }
 }
 
-const link1 = document.getElementById('link1');
-// const link2 = document.getElementById('link2');
-const link3 = document.getElementById('link3');
-const link4 = document.getElementById('link4');
+document.addEventListener('DOMContentLoaded', () => {
+    const link1 = document.getElementById('link1');
+    const link3 = document.getElementById('link3');
+    const link4 = document.getElementById('link4');
 
-link1.addEventListener('click', () => {
-    scrollToElement('.content');
-});
+    link1.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        scrollToElement('.container'); // Adjust the selector to your desired section
+    });
 
-// link2.addEventListener('click', () => {
-//     scrollToElement('.projects');
-// });
+    link3.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        scrollToElement('.skills'); // Adjust the selector to your desired section
+    });
 
-link3.addEventListener('click', () => {
-    scrollToElement('.skills');
-});
-
-link4.addEventListener('click', () => {
-    scrollToElement('.contact');
+    link4.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        scrollToElement('.contact'); // Adjust the selector to your desired section
+    });
 });
 
 // Send Email Modal

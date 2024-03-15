@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <!-- Boxicons Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.7/css/boxicons.min.css">
+    <!-- SweetAlert2 Library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="icon" href="/material/icons/portfolio.png">
     <link rel="stylesheet" href="style.css">
     <title>Portafolio</title>
@@ -15,6 +19,7 @@
         <h1>My Portafolio</h1>
     </header>
 
+    <!-- Navbar section -->
     <nav>
         <div class="nav-logo">
             <a href="#">
@@ -29,9 +34,10 @@
             <li id="link3" class="link"><a href="#">Skills</a></li>
             <li id="link4" class="link"><a href="#">Contact</a></li>
         </ul>
-        <button type="button" class="btn">Hire me !</button>
+        <button type="button" class="btn" style="pointer-events: none;">Hire me !</button>
     </nav>
 
+    <!-- Who I'm section -->
     <header class="container">
         <div class="content">
             <h4>I'm not a Robot</h4>
@@ -93,6 +99,7 @@
         </div>
     </section> -->
 
+    <!-- Skills section -->
     <section class="container">
         <h2 class="header-section">Skills</h2>
 
@@ -168,7 +175,10 @@
         </div>
 
     </section>
+
     <br>
+
+    <!-- Section of Contact Information -->
     <section class="container">
         <h2 class="header-section">Contact</h2>
         
@@ -219,11 +229,33 @@
     </section>
 
     <footer class="footer">
-        <!-- <h2>Footer</h2> -->
-        <div class="copyright">
-            Copyright © 2024 Cruz Isaac. All Rights Reserved.
+        <div class="footer-content">
+            <div class="built-with">
+                <h3>Built with</h3>
+                <ul>
+                    <li>HTML <i class="bx bxl-html5"></i></li>
+                    <li>CSS <i class="bx bxl-css3"></i></li>
+                    <li>JavaScript <i class="bx bxl-javascript"></i></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><i class="bx bx-phone-call"></i> +52 477 399 1363</li>
+                    <li>
+                        <i class="bx bx-mail-send"></i> 
+                            cruzisaacervantes@hotmail.com 
+                        <i id="copy-email" class='bx bx-copy-alt bx-tada' title="Copy" target="_blank" rel="noopener noreferrer"></i>                    
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="copyright">
+                <p>Copyright © 2024 Cruz Isaac. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+    
 
     <script src="index.js"></script>
 </body>
